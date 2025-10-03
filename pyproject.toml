@@ -8,6 +8,7 @@ dependencies = []
 
 [dependency-groups]
 ai-agent = [
+    "msgraph-sdk>=1.45.0",
     "openai>=2.0.0",
 ]
 ai-news-automation = [
