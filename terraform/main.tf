@@ -65,8 +65,19 @@ resource "azuread_application" "ai-hub-app" {
 
     resource_app_id = "00000003-0000-0000-c000-000000000000" # Microsoft Graph
 
+    # links to resource access ids: https://learn.microsoft.com/en-us/graph/permissions-reference
     resource_access {
-      id   = "9492366f-7969-46a4-8d15-ed1a20078fff" # Sites.ReadWrite.All
+      id   = "9492366f-7969-46a4-8d15-ed1a20078fff" # Sites.ReadWrite.All 
+      type = "Role"
+    }
+
+    resource_access {
+      id   = "332a536c-c7ef-4017-ab91-336970924f0d" # Sites.Read.All
+      type = "Role"
+    }
+
+    resource_access {
+      id   = "a82116e5-55eb-4c41-a434-62fe8a61c773" # Sites.FullControl.All
       type = "Role"
     }
   }
